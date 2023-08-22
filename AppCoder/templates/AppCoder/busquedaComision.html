@@ -1,0 +1,16 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+{% block titulo %} ESTA ES LA PAGINA DE BUSQUEDA DE COMISIONES {% endblock %}
+{% block contenido_que_cambia %} 
+<style>
+    h2 {color: rebeccapurple;}
+    h1 {color: lightskyblue}
+</style>
+<h2>{{ mensaje }}</h2>
+<h1> Formulario para buscar una comisión </h1>
+<form action="{% url 'buscar' %}" method = "GET">
+    <input type="number" name="comision" id="comision" placeholder="INSERTE COMISION">
+    <input type="submit" value="BUSCAR COMISION">
+</form>
+
+{% endblock %}
